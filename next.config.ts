@@ -14,6 +14,9 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true, // ✅ TS errors also won’t block deploy
   },
+   compiler: {
+    styledComponents: true, // Enable styled-components
+  },
 };
 
 export default nextConfig;
