@@ -105,7 +105,7 @@ nav ul li a:hover {
 
 #first {
    content: "";
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;
@@ -151,7 +151,8 @@ nav ul li a:hover {
   }
 
 .adjust{
-  height: 530vh;
+  min-height: 530vh;
+  height: auto;
   width: 100%;
   /* background-color: rgba(84, 9, 9, 0.7); */
   display: flex;
@@ -160,22 +161,20 @@ nav ul li a:hover {
 #outab{
   color: #ffffff;
   width: 100%;
-  height: 100vh;
-  transform: scaleX(-1); 
+  min-height: 100vh;
+  height: auto;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  /* align-items: center; 
-  background-color: blue;
-  overflow: hidden; */
+  /* background-color: blue; */
 }
 
 #updates{
   color: #ffffff;
   width: 100%;
-  height: 122vh;
+  min-height: 135vh;
+  height: auto;
   /* max-height: auto; */
-  transform: scaleX(-1); 
+  /* transform: scaleX(-1);  */
   display: flex;
   /* background-color: #28a745; */
   padding: 20px;
@@ -185,12 +184,13 @@ nav ul li a:hover {
 #updatrs{
   color: #ffffff;
   width: 100%;
-  height: 100vh;
-  /* max-height: auto; */
-  transform: scaleX(-1); 
+  min-height: 100vh;
+  height: auto; 
+  /* transform: scaleX(-1);  */
   display: flex;
   margin-top: 50px;
   flex-direction: column;
+  /* background-color: blue; */
   /* justify-content: center;
   align-items: center; */
 }
@@ -215,30 +215,31 @@ nav ul li a:hover {
 }
 .head{
   width: 100%;
-  height: 18vh;
-  /* background-color: black; */
+  height: 20vh;
+  /* background-color: peru; */
   text-align: center;
 }
 .head h1{
   color: white;
   font-weight: bold;
   font-size: 8vh;
-  padding-top: 85px;
+  padding-top: 65px;
   /* /* font-family: Poppins, Arial, sans-serif; */
   font-family: "Montserrat", serif; 
 }
 .about{
   /* background-color: yellow; */
   width: 100%;
-  min-height: 90vh;max-height: auto;
+  /* min-height: 90vh;max-height: auto; */
+  min-height: 80vh;
+  height: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: unset; */
 }
 .about1{
   /* background-color: green; */
   min-width: 50%;
-  max-height: auto; /* use auto instead of fixed 90vh for responsiveness */
   padding: 30px;
   border-radius: 12px;
   color: #fff;
@@ -246,6 +247,7 @@ nav ul li a:hover {
   font-size: clamp(0.9rem, 1.2vw, 1.2rem);
   line-height: 1.6;
   min-height: 80vh;
+  height: auto;
   text-align:  center;
 }
 .about1 h3{
@@ -260,14 +262,14 @@ nav ul li a:hover {
  .about2 {
   /* background-color: rgb(80, 62, 140); */
   min-width: 50%;
-  max-height: auto; /* use auto instead of fixed 90vh for responsiveness */
+  
   padding: 30px;
   border-radius: 12px;
   color: #fff;
   font-family: 'Poppins', 'Arial', sans-serif;
   font-size: clamp(0.9rem, 1.2vw, 1.2rem);
   line-height: 1.6;
-  min-height: 80vh;
+  height: 80vh;
   text-align:  center;
 }
 
@@ -310,24 +312,23 @@ nav ul li a:hover {
 #update{
   color: #ffffff;
   width: 100%;
-  height: 100vh;
-  /* max-height:500vh ; */
-  transform: scaleX(-1); 
+  min-height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
    justify-content: center;
   align-items: center; 
-  /* background-color: yellow; */
-  overflow-y: auto;
+  /* background-color: cadetblue; */
+  /* overflow-y: auto;
   webkit-scrollbar {
-  width: 0px;
-}
-  scrollbar-width: none; /* For Firefox */
-}
+  width: 0px; */
+/* /* }
+  scrollbar-width: none;  */
+} 
 .skills{
   /* background-color: purple; */
   width: 100%;
-  min-height: 90vh;
+  /* min-height: 80vh;height: auto; */
   display: flex;
   /* justify-content: center;
   align-items: center;
@@ -348,12 +349,12 @@ nav ul li a:hover {
 }
 
 .skills-container {
-  /* background-color: #721c24; */
+  /* background-color: #f80019; */
   width: 100%;
   max-width: 1325px;
   margin: 0 auto;
-  min-height: 90vh; 
-  
+  /* min-height: 80vh;  */
+  /* height: auto; */
   display: grid;
   grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
 }
@@ -466,7 +467,9 @@ nav ul li a:hover {
   /* background: #ee0f0f; */
   backdrop-filter: blur(45px);
   flex-shrink: 0;
-  height: 300px;
+  /* height: 300px; */
+  min-height: 300px;
+    height: auto;
   font-family: Poppins, Arial, sans-serif;
 }
 
@@ -545,27 +548,27 @@ nav ul li a:hover {
   white-space: pre-line; /* This will preserve line breaks */
   overflow-wrap: break-word; /* Breaks long words if needed */
 }
-.project-overlay::-webkit-scrollbar {
+/* .project-overlay::-webkit-scrollbar {
   width: 1px;
-}
-project-overlay::-webkit-scrollbar-track {
+} */
+/* project-overlay::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.1);
-}
+} */
 
-.project-overlay::-webkit-scrollbar-thumb {
+/* .project-overlay::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 2px;
-}
+} */
 .map{
-  width: 325px;
+  width: 255px;
   /* background-color: yellow; */
 }
 .end{
   -webkit-backdrop-filter: blur(45px);
     backdrop-filter: blur(5px);
     width: 100%;
-    height: 75vh;
-    margin-top: 45px;
+    height: 80vh;
+    /* margin-top: 45px; */
     padding: 5px;
     border: 5px solid black;
     border-radius: 10px;
@@ -630,19 +633,28 @@ color: #000000;
     font-family: Montserrat, serif;
     font-size: 2.2rem;
 }
+.under p {
+    color: #000;
+    word-wrap: break-word;
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: Montserrat, serif;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
 }
 @media (max-width: 768px) {
   
   #first {
    content: "";
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;
-  height: 123vh;
+  height: 100vh;
   animation: zoomEffect 10s infinite alternate ease-in-out;
   background: url('/gif for head.gif'); 
-  background-size: cover;
+  background-size: fit;
   background-repeat: no-repeat;
   background-position: center;
   transform: scaleX(-1); 
@@ -650,15 +662,30 @@ color: #000000;
   display: none;
   border: blur(5px);
    box-shadow: 0 0 0px rgba(0, 0, 0, 0.3);
+   overflow: hidden;
 }
  @keyframes zoomEffect {
   0% {
-    background-size: 100%;
+    background-size: 130%;
   }
   100% {
-    background-size: 120%;
+    background-size: 150%;
   } 
 } 
+.photo {
+    backdrop-filter: blur(45px);
+    justify-content: center;
+    align-items: center;
+    width: 69%;
+    height: 45vh;
+    margin-top: 55px;
+    display: flex;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-image: initial;
+    border-radius: 15%;
+}
 .under h2 {
         color: #000;
         text-align: center;
@@ -682,15 +709,7 @@ color: #000000;
   nav ul li a {
     font-size: 1rem;
   } 
-  .about1 {
-    min-width: 50%;
-  height: 90vh;max-height: auto;
-  font-family: 'Poppins', 'Arial', sans-serif;
-   font-size: 12px;
-  line-height: 1.6;
-  padding: 30px;
-  font-weight:600;
-}
+  
 .skills-grid {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         gap: 1rem;
@@ -710,22 +729,74 @@ color: #000000;
   .skill-name {
     font-size: 1rem;
   } 
+  .head {
+    text-align: center;
+    /* background-color: peru; */
+    width: 100%;
+    height: 10vh;
+}
   .head h1 {
     color: #fff;
-    padding-top: 90px;
+    padding-top: 20px;
     font-family: Montserrat, serif;
-    font-size: 8vh;
+    font-size: 5vh;
     font-weight: bold;
+}
+.about {
+    /* background-color: #ff0; */
+    justify-content: center;
+    align-items: unset;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    height: auto;
+}
+.about1 {
+    color: #fff;
+    text-align: center;
+    /* background-color: green; */
+    border-radius: 12px;
+    min-width: 50%;
+    min-height: 90vh;
+    padding: 10px;
+    font-family: Poppins, Arial, sans-serif;
+    font-size: max(0.9rem, min(1.2vw, 1.2rem));
+    line-height: 1.6;
+    height: auto;
 }
 #updates {
     color: rgb(255, 255, 255);
     width: 100%;
-    height: 143vh;
+    height: 100vh;
     display: flex;
-    transform: scaleX(-1);
+    /* transform: scaleX(-1); */
     padding: 20px;
 }
+.about2 {
+    color: #fff;
+    text-align: center;
+    /* background-color: #503e8c; */
+    border-radius: 12px;
+    min-width: 50%;
+    min-height: 90vh;
+    padding: 10px;
+    font-family: Poppins, Arial, sans-serif;
+    font-size: max(0.9rem, min(1.2vw, 1.2rem));
+    line-height: 1.6;
+    height: auto;
 }
+#updatrs {
+    color: #fff;
+    /* background-color: #00f; */
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    min-height: 90vh;
+    margin-top: 50px;
+    display: flex;
+}
+}
+
 @media (max-width: 425px) {
 .parant{
   /* background-color:red; */
@@ -778,11 +849,11 @@ color: #000000;
 }
  #first {
    content: "";
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;
-  height: 158vh;
+  height: 100vh;
   animation: zoomEffect 10s infinite alternate ease-in-out;
   background: url('/gif for head.gif'); 
   background-size: cover;
@@ -795,10 +866,10 @@ color: #000000;
 }
  @keyframes zoomEffect {
   0% {
-    background-size: 100%;
+    background-size: 350%;
   }
   100% {
-    background-size: 120%;
+    background-size: 250%;
   } 
 } 
  .head h1 {
@@ -811,7 +882,8 @@ color: #000000;
 .about{
   
   width: 100%;
-  min-height: 90vh;max-height: auto;
+  min-height: 90vh;height: auto;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -821,14 +893,15 @@ color: #000000;
  .adjust {
         flex-direction: column;
         width: 100%;
-        height: 670vh;
+       min-height: 530vh;
+        height: auto;
         display: flex;
     }
 #outab{
   color: #ffffff;
   width: 100%;
-  height: 175vh;
-  transform: scaleX(-1); 
+  min-height: 100vh;height: auto;
+  /* transform: scaleX(-1);  */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -870,11 +943,11 @@ color: #000000;
  @media (max-width: 375px) {
  #first {
    content: "";
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;
-  height: 163vh;
+  height: 100vh;
   animation: zoomEffect 10s infinite alternate ease-in-out;
   background: url('/gif for head.gif'); 
   background-size: cover;
@@ -887,10 +960,10 @@ color: #000000;
 }
  @keyframes zoomEffect {
   0% {
-    background-size: 100%;
+    background-size: 325%;
   }
   100% {
-    background-size: 120%;
+    background-size: 400%;
   } 
 } 
 .child {
@@ -906,11 +979,11 @@ color: #000000;
 @media (max-width: 320px) {
  #first {
    content: "";
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;
-  height: 169vh;
+  height: 100vh;
   animation: zoomEffect 10s infinite alternate ease-in-out;
   background: url('/gif for head.gif'); 
   background-size: cover;
@@ -923,10 +996,10 @@ color: #000000;
 }
  @keyframes zoomEffect {
   0% {
-    background-size: 100%;
+    background-size: 325%;
   }
   100% {
-    background-size: 120%;
+    background-size: 450%;
   } 
 } 
 .child {
@@ -940,14 +1013,15 @@ color: #000000;
     .adjust {
     flex-direction: column;
     width: 100%;
-    height: 670vh;
+    min-height: 530vh;
+    height: auto;
     display: flex;
 }
 #outab{
   color: #ffffff;
   width: 100%;
-  height: 220vh;
-  transform: scaleX(-1); 
+  min-height: 100vh;height: auto;
+  /* transform: scaleX(-1);  */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -957,13 +1031,13 @@ color: #000000;
 }
 .about1 {
         min-width: 50%;
-        height: 105vh;
-        max-height: auto;
-        padding: 30px;
+       min-height: 90vh;
+        height: auto;
+        padding: 20px;
         font-family: Poppins, Arial, sans-serif;
         font-size: 12px;
-        font-weight: 600;
-        line-height: 1.6;
+        font-weight: 500;
+        /* line-height: 1.6; */
     }
     .skills-grid {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -1016,5 +1090,9 @@ color: #000000;
         font-size: 8vh;
         font-weight: bold;
     }
+    .map{
+  width: 190px;
+  /* background-color: yellow; */
+}
 } 
 

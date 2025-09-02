@@ -194,8 +194,6 @@ const IntroAnimation: React.FC = () => {
               </div>
             )}
             <div className="arrange">
-              {/* <h3>{p.title}</h3>
-            {p.description && <p>{p.description}</p>} */}
               <div className="project-links">
                 {p.github && (
                   <a href={p.github} target="_blank" rel="noopener noreferrer">
@@ -236,8 +234,8 @@ const IntroAnimation: React.FC = () => {
       <nav>
         <Navbar />
       </nav>
-      <div id="first">
-        <div className="adjust">
+      <div className="adjust">
+        <div id="first">
           <div className="parant">
             <div className="child">
               <HeroTypingServer
@@ -261,159 +259,159 @@ const IntroAnimation: React.FC = () => {
               </div>
             </div>
           </div>
-          <div id="outab">
-            <div className="head">
-              <h1>ABOUT</h1>
+        </div>
+        <div id="outab">
+          <div className="head">
+            <h1>ABOUT</h1>
+          </div>
+          <div className="about">
+            <div className="about1">
+              <h3>WEB-DEV JOURNEY</h3>
+              <p>
+                I'm Faizan, a passionate React & Next.js developer with hands-on
+                full-stack experience in Next.js, MongoDB , and modern
+                frameworks. I specialize in building clean, scalable, and
+                user-friendly web applications with a strong SaaS product
+                mindset. I have worked on my own real-time SaaS projects
+                "toolssaver.com" and gained the work flow of real time project
+                experience, which gave me a strong understanding of how the
+                full-stack workflow works—from frontend UI/UX to backend logic,
+                database integration, authentication, and deployment. With a
+                solid foundation in HTML, CSS, JavaScript, React, Next.js, and
+                MongoDB, I focus on creating dynamic and responsive websites
+                that deliver seamless user experiences. I also leverage AI for
+                productivity and innovation, always aiming to integrate
+                user-centric features that make a real impact. My goal is to
+                deliver high-quality digital solutions that not only meet client
+                needs but also enhance usability and engagement. Let's connect
+                and create something amazing together!
+              </p>
             </div>
-            <div className="about">
-              <div className="about1">
-                <h3>WEB-DEV JOURNEY</h3>
-                <p>
-                  I'm Faizan, a passionate React & Next.js developer with
-                  hands-on full-stack experience in Next.js, MongoDB , and
-                  modern frameworks. I specialize in building clean, scalable,
-                  and user-friendly web applications with a strong SaaS product
-                  mindset. I have worked on my own real-time SaaS projects
-                  "toolssaver.com" and gained the work flow of real time project
-                  experience, which gave me a strong understanding of how the
-                  full-stack workflow works—from frontend UI/UX to backend
-                  logic, database integration, authentication, and deployment.
-                  With a solid foundation in HTML, CSS, JavaScript, React,
-                  Next.js, and MongoDB, I focus on creating dynamic and
-                  responsive websites that deliver seamless user experiences. I
-                  also leverage AI for productivity and innovation, always
-                  aiming to integrate user-centric features that make a real
-                  impact. My goal is to deliver high-quality digital solutions
-                  that not only meet client needs but also enhance usability and
-                  engagement. Let's connect and create something amazing
-                  together!
-                </p>
-              </div>
-              <div className="about2">
-                <h3>QUALIFICATION JOURNEY</h3>
-                <ul className="journey-list">
-                  <li>
-                    <strong>
-                      Bachelor of Computer Applications (BCA) thiruvalluvar
-                      University islamiah College (autonomous)
-                    </strong>{" "}
-                    <br />
-                    2022 – 2025
-                  </li>
-                  <li>
-                    <strong>Web Development Intern (Aspirasys)</strong> <br />
-                    15 days – Nov 25, 2024 to Dec 10, 2024
-                  </li>
-                  <li>
-                    <strong>Real-Time Project Experience</strong> –
-                    <a
-                      href="https://toolssaver.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      toolssaver.com
-                    </a>{" "}
-                    <br />
-                    July 1, 2025 – July 30, 2025
-                  </li>
-                </ul>
-              </div>
+            <div className="about2">
+              <h3>QUALIFICATION JOURNEY</h3>
+              <ul className="journey-list">
+                <li>
+                  <strong>
+                    Bachelor of Computer Applications (BCA) thiruvalluvar
+                    University islamiah College (autonomous)
+                  </strong>{" "}
+                  <br />
+                  2022 – 2025
+                </li>
+                <li>
+                  <strong>Web Development Intern (Aspirasys)</strong> <br />
+                  15 days – Nov 25, 2024 to Dec 10, 2024
+                </li>
+                <li>
+                  <strong>Real-Time Project Experience</strong> –
+                  <a
+                    href="https://toolssaver.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    toolssaver.com
+                  </a>{" "}
+                  <br />
+                  July 1, 2025 – July 30, 2025
+                </li>
+              </ul>
             </div>
           </div>
-          <div id="update">
-            <div className="head">
-              <h1>SKILLS</h1>
-            </div>
-            <div className="skills">
-              {loading ? (
-                <div className="skills-loading">
-                  <p>Loading skills...</p>
-                </div>
-              ) : error ? (
-                <div className="skills-error">
-                  <p>Error loading skills: {error}</p>
-                </div>
-              ) : (
-                <div className="skills-container">
-                  {skills.length > 0 ? (
-                    <div className="skills-grid">
-                      {skills.map((skill) => (
-                        <div key={skill._id} className="skill-card">
-                          {skill.image && (
-                            <div className="skill-image">
-                              <img
-                                src={skill.image}
-                                alt={skill.name}
-                                onError={(e) => {
-                                  e.currentTarget.style.display = "none";
-                                }}
-                              />
-                            </div>
-                          )}
-                          <div className="skill-info">
-                            <h4 className="skill-name">{skill.name}</h4>
-                            {skill.level && (
-                              <span
-                                className={`skill-level level-${skill.level}`}
-                              >
-                                {skill.level}
-                              </span>
-                            )}
+        </div>
+        <div id="update">
+          <div className="head">
+            <h1>SKILLS</h1>
+          </div>
+          <div className="skills">
+            {loading ? (
+              <div className="skills-loading">
+                <p>Loading skills...</p>
+              </div>
+            ) : error ? (
+              <div className="skills-error">
+                <p>Error loading skills: {error}</p>
+              </div>
+            ) : (
+              <div className="skills-container">
+                {skills.length > 0 ? (
+                  <div className="skills-grid">
+                    {skills.map((skill) => (
+                      <div key={skill._id} className="skill-card">
+                        {skill.image && (
+                          <div className="skill-image">
+                            <img
+                              src={skill.image}
+                              alt={skill.name}
+                              onError={(e) => {
+                                e.currentTarget.style.display = "none";
+                              }}
+                            />
                           </div>
+                        )}
+                        <div className="skill-info">
+                          <h4 className="skill-name">{skill.name}</h4>
+                          {skill.level && (
+                            <span
+                              className={`skill-level level-${skill.level}`}
+                            >
+                              {skill.level}
+                            </span>
+                          )}
                         </div>
-                      ))}
-                    </div>
-                  ) : (
-                    <p>No skills found.</p>
-                  )}
-                </div>
-              )}
-            </div>
-          </div>
-          <div id="updates">
-            <div className="head">
-              <h1>PROJECTS</h1>
-
-              {loadingProjects ? (
-                <p>Loading projects...</p>
-              ) : errorProjects ? (
-                <p>Error: {errorProjects}</p>
-              ) : (
-                <>
-                  <div className="paling">
-                    <h2>Realtime </h2>
-                    {renderProjectsRow("realtime")}
-
-                    <h2>Hobby </h2>
-                    {renderProjectsRow("hobby")}
+                      </div>
+                    ))}
                   </div>
-                </>
-              )}
-            </div>
+                ) : (
+                  <p>No skills found.</p>
+                )}
+              </div>
+            )}
           </div>
-          <div id="updatrs">
-            <div className="head">
-              <h1>CONTACT</h1>
-            </div>
-            <div className="end">
-              <div className="end1">
-                <ContactForm />
-              </div>
-              <div className="end1">
-                <div className="under">
-                  <h2>Mobile Number</h2>
-                  <p> +91 6379549131</p>
-                  <h2>G-mail</h2>
-                  <p> ftfaizan9629@gmail.com</p>
+        </div>
+        <div id="updates">
+          <div className="head">
+            <h1>PROJECTS</h1>
+
+            {loadingProjects ? (
+              <p>Loading projects...</p>
+            ) : errorProjects ? (
+              <p>Error: {errorProjects}</p>
+            ) : (
+              <>
+                <div className="paling">
+                  <h2>Realtime </h2>
+                  {renderProjectsRow("realtime")}
+
+                  <h2>Hobby </h2>
+                  {renderProjectsRow("hobby")}
                 </div>
+              </>
+            )}
+          </div>
+        </div>
+        <div id="updatrs">
+          <div className="head">
+            <h1>CONTACT</h1>
+          </div>
+          <div className="end">
+            <div className="end1">
+              <ContactForm />
+            </div>
+            <div className="end1">
+              <div className="under">
+                <h2>Mobile Number</h2>
+                <p> +91 6379549131</p>
+                <h2>G-mail</h2>
+                <p> ftfaizan9629@gmail.com</p>
               </div>
-              <div className="end2">
-                <Card />
-              </div>
+            </div>
+            <div className="end2">
+              <Card />
             </div>
           </div>
         </div>
       </div>
+      
     </>
   );
 };
